@@ -1,5 +1,6 @@
 import geneticalgorithm.*;
 import geneticalgorithm.model.Chromosome;
+import salesmanproblem.SalesmanPopulationCreator;
 import salesmanproblem.SalesmanScoreEvaluator;
 import salesmanproblem.io.FileParser;
 import salesmanproblem.model.SalesmanGene;
@@ -27,7 +28,7 @@ public class Main {
     List<SalesmanGene> possibleGenes = FileParser.parseFile("resources/salesman_test3");
     MainAlgorithm<SalesmanGene> mainAlgorithm =
         new MainAlgorithm<>(
-            new PopulationCreator<>(),
+            new SalesmanPopulationCreator(),
             new MutationManager<>(),
             new SalesmanScoreEvaluator(),
             possibleGenes);

@@ -9,17 +9,17 @@ import java.util.List;
 
 public class MainAlgorithm<T extends Gene> {
 
-  private PopulationCreator<T> populationCreator;
+  private IPopulationCreator<T> IPopulationCreator;
   private MutationManager<T> mutationManager;
   private IScoreEvaluator<T> scoreEvaluator;
   private List<T> possibleGenes;
 
   public MainAlgorithm(
-      PopulationCreator<T> populationCreator,
+      IPopulationCreator<T> IPopulationCreator,
       MutationManager<T> mutationManager,
       IScoreEvaluator<T> scoreEvaluator,
       List<T> possibleGenes) {
-    this.populationCreator = populationCreator;
+    this.IPopulationCreator = IPopulationCreator;
     this.mutationManager = mutationManager;
     this.scoreEvaluator = scoreEvaluator;
     this.possibleGenes = possibleGenes;
@@ -33,7 +33,7 @@ public class MainAlgorithm<T extends Gene> {
       double topSurvivorsPercentage) {
 
     List<Chromosome<T>> population =
-        this.populationCreator.newGeneration(this.possibleGenes, populationCount);
+        this.IPopulationCreator.newGeneration(this.possibleGenes, populationCount);
     AlgorithmLogger.log("Generated first population.");
 
     Chromosome<T> bestChromosome = null;
@@ -41,11 +41,11 @@ public class MainAlgorithm<T extends Gene> {
     for (int i = 0; i < generations; i++) {
 
       List<Chromosome<T>> survivingPopulation =
-          populationCreator.getCrossoverPool(population, scoreEvaluator, topSurvivorsPercentage);
+          IPopulationCreator.getCrossoverPool(population, scoreEvaluator, topSurvivorsPercentage);
       AlgorithmLogger.log("Generated surviving population for generation : " + i);
 
       List<Chromosome<T>> offSpring =
-          populationCreator.newGeneration(survivingPopulation, crossoverRate, scoreEvaluator);
+          IPopulationCreator.newGeneration(survivingPopulation, crossoverRate, scoreEvaluator);
 
       AlgorithmLogger.log("Generated offSpring population for generation : " + i);
 
