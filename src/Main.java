@@ -35,6 +35,7 @@ public class Main {
     Chromosome<SalesmanGene> result =
         mainAlgorithm.getSolution(
             GENERATIONS, POPULATION_COUNT, MUTATION_RATE, CROSSOVER_RATE, TOP_SURVIVORS_PERCENTAGE);
-    System.out.println(new SolutionValidator<SalesmanGene>().isValid(result, possibleGenes));
+    System.out.println(
+        new SolutionValidator<SalesmanGene>().isValid(result, possibleGenes) ? "Valid" : "Invalid");
   }
 }
