@@ -1,11 +1,11 @@
 import geneticalgorithm.AlgorithmLogger;
 import geneticalgorithm.MainAlgorithm;
 import geneticalgorithm.PopulationCreator;
+import geneticalgorithm.SolutionValidator;
 import geneticalgorithm.model.Chromosome;
 import salesmanproblem.SalesmanChromosomePrinter;
 import salesmanproblem.SalesmanMutationManager;
 import salesmanproblem.SalesmanScoreEvaluator;
-import salesmanproblem.SolutionValidator;
 import salesmanproblem.io.FileParser;
 import salesmanproblem.model.SalesmanGene;
 
@@ -41,6 +41,6 @@ public class Main {
     Chromosome<SalesmanGene> result =
         mainAlgorithm.getSolution(
             GENERATIONS, POPULATION_COUNT, MUTATION_RATE, CROSSOVER_RATE, TOP_SURVIVORS_PERCENTAGE);
-    System.out.println(SolutionValidator.isValid(result, possibleGenes));
+    System.out.println(new SolutionValidator<SalesmanGene>().isValid(result, possibleGenes));
   }
 }
