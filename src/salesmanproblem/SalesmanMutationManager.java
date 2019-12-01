@@ -1,9 +1,9 @@
-package geneticalgorithm.salesmanproblem;
+package salesmanproblem;
 
-import geneticalgorithm.mainalgorithm.AlgorithmLogger;
-import geneticalgorithm.mainalgorithm.interfaces.IMutationManager;
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.salesmanproblem.model.SalesmanGene;
+import geneticalgorithm.AlgorithmLogger;
+import geneticalgorithm.interfaces.IMutationManager;
+import geneticalgorithm.model.Chromosome;
+import salesmanproblem.model.SalesmanGene;
 
 import java.util.ArrayList;
 import java.util.Random;

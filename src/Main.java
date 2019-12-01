@@ -1,12 +1,12 @@
-import geneticalgorithm.mainalgorithm.AlgorithmLogger;
-import geneticalgorithm.mainalgorithm.MainAlgorithm;
-import geneticalgorithm.mainalgorithm.PopulationCreator;
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.salesmanproblem.SalesmanChromosomePrinter;
-import geneticalgorithm.salesmanproblem.SalesmanMutationManager;
-import geneticalgorithm.salesmanproblem.SalesmanScoreEvaluator;
-import geneticalgorithm.salesmanproblem.io.FileParser;
-import geneticalgorithm.salesmanproblem.model.SalesmanGene;
+import geneticalgorithm.AlgorithmLogger;
+import geneticalgorithm.MainAlgorithm;
+import geneticalgorithm.PopulationCreator;
+import geneticalgorithm.model.Chromosome;
+import salesmanproblem.SalesmanChromosomePrinter;
+import salesmanproblem.SalesmanMutationManager;
+import salesmanproblem.SalesmanScoreEvaluator;
+import salesmanproblem.io.FileParser;
+import salesmanproblem.model.SalesmanGene;
 
 import java.io.IOException;
 import java.util.List;

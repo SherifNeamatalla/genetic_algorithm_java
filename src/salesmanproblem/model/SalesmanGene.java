@@ -1,6 +1,6 @@
-package geneticalgorithm.salesmanproblem.model;
+package salesmanproblem.model;
 
-import geneticalgorithm.mainalgorithm.model.Gene;
+import geneticalgorithm.model.Gene;
 
 public class SalesmanGene extends Gene {
 

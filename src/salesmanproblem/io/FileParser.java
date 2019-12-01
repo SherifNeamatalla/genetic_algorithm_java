@@ -1,6 +1,6 @@
-package geneticalgorithm.salesmanproblem.io;
+package salesmanproblem.io;
 
-import geneticalgorithm.salesmanproblem.model.SalesmanGene;
+import salesmanproblem.model.SalesmanGene;
 
 import java.io.BufferedReader;
 import java.io.File;

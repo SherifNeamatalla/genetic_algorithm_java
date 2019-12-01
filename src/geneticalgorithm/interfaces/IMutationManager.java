@@ -1,7 +1,7 @@
-package geneticalgorithm.mainalgorithm.interfaces;
+package geneticalgorithm.interfaces;
 
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.mainalgorithm.model.Gene;
+import geneticalgorithm.model.Chromosome;
+import geneticalgorithm.model.Gene;
 
 import java.util.ArrayList;
 import java.util.List;

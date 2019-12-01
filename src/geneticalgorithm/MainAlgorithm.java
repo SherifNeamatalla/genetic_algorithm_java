@@ -1,10 +1,10 @@
-package geneticalgorithm.mainalgorithm;
+package geneticalgorithm;
 
-import geneticalgorithm.mainalgorithm.interfaces.IChromosomePrinter;
-import geneticalgorithm.mainalgorithm.interfaces.IMutationManager;
-import geneticalgorithm.mainalgorithm.interfaces.IScoreEvaluator;
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.mainalgorithm.model.Gene;
+import geneticalgorithm.interfaces.IScoreEvaluator;
+import geneticalgorithm.interfaces.IChromosomePrinter;
+import geneticalgorithm.interfaces.IMutationManager;
+import geneticalgorithm.model.Chromosome;
+import geneticalgorithm.model.Gene;
 
 import java.util.Comparator;
 import java.util.List;

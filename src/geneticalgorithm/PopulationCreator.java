@@ -1,8 +1,8 @@
-package geneticalgorithm.mainalgorithm;
+package geneticalgorithm;
 
-import geneticalgorithm.mainalgorithm.interfaces.IScoreEvaluator;
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.mainalgorithm.model.Gene;
+import geneticalgorithm.interfaces.IScoreEvaluator;
+import geneticalgorithm.model.Chromosome;
+import geneticalgorithm.model.Gene;
 
 import java.util.*;
 import java.util.stream.Collectors;

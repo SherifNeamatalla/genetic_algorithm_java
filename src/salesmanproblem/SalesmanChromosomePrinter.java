@@ -1,8 +1,8 @@
-package geneticalgorithm.salesmanproblem;
+package salesmanproblem;
 
-import geneticalgorithm.mainalgorithm.interfaces.IChromosomePrinter;
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.salesmanproblem.model.SalesmanGene;
+import geneticalgorithm.interfaces.IChromosomePrinter;
+import geneticalgorithm.model.Chromosome;
+import salesmanproblem.model.SalesmanGene;
 
 public class SalesmanChromosomePrinter implements IChromosomePrinter<SalesmanGene> {
 

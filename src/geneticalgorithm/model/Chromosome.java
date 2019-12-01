@@ -1,4 +1,4 @@
-package geneticalgorithm.mainalgorithm.model;
+package geneticalgorithm.model;
 
 import java.util.List;
 

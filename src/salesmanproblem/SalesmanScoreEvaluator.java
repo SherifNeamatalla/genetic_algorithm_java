@@ -1,8 +1,8 @@
-package geneticalgorithm.salesmanproblem;
+package salesmanproblem;
 
-import geneticalgorithm.mainalgorithm.interfaces.IScoreEvaluator;
-import geneticalgorithm.mainalgorithm.model.Chromosome;
-import geneticalgorithm.salesmanproblem.model.SalesmanGene;
+import geneticalgorithm.interfaces.IScoreEvaluator;
+import geneticalgorithm.model.Chromosome;
+import salesmanproblem.model.SalesmanGene;
 
 public class SalesmanScoreEvaluator implements IScoreEvaluator<SalesmanGene> {
   @Override

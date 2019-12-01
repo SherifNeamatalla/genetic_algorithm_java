@@ -1,4 +1,4 @@
-package geneticalgorithm.mainalgorithm;
+package geneticalgorithm;
 
 public class AlgorithmLogger {
 

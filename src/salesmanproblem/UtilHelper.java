@@ -1,6 +1,6 @@
-package geneticalgorithm.salesmanproblem;
+package salesmanproblem;
 
-import geneticalgorithm.salesmanproblem.model.SalesmanGene;
+import salesmanproblem.model.SalesmanGene;
 
 public class UtilHelper {
 
