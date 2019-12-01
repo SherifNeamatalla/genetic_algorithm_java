@@ -1,10 +1,5 @@
-import geneticalgorithm.AlgorithmLogger;
-import geneticalgorithm.MainAlgorithm;
-import geneticalgorithm.PopulationCreator;
-import geneticalgorithm.SolutionValidator;
-import geneticalgorithm.MutationManager;
+import geneticalgorithm.*;
 import geneticalgorithm.model.Chromosome;
-import salesmanproblem.SalesmanChromosomePrinter;
 import salesmanproblem.SalesmanScoreEvaluator;
 import salesmanproblem.io.FileParser;
 import salesmanproblem.model.SalesmanGene;
@@ -35,7 +30,6 @@ public class Main {
             new PopulationCreator<>(),
             new MutationManager<>(),
             new SalesmanScoreEvaluator(),
-            new SalesmanChromosomePrinter(),
             possibleGenes);
 
     Chromosome<SalesmanGene> result =

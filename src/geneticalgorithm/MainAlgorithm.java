@@ -1,6 +1,5 @@
 package geneticalgorithm;
 
-import geneticalgorithm.interfaces.IChromosomePrinter;
 import geneticalgorithm.interfaces.IScoreEvaluator;
 import geneticalgorithm.model.Chromosome;
 import geneticalgorithm.model.Gene;
@@ -13,19 +12,16 @@ public class MainAlgorithm<T extends Gene> {
   private PopulationCreator<T> populationCreator;
   private MutationManager<T> mutationManager;
   private IScoreEvaluator<T> scoreEvaluator;
-  private IChromosomePrinter<T> chromosomePrinter;
   private List<T> possibleGenes;
 
   public MainAlgorithm(
       PopulationCreator<T> populationCreator,
       MutationManager<T> mutationManager,
       IScoreEvaluator<T> scoreEvaluator,
-      IChromosomePrinter<T> chromosomePrinter,
       List<T> possibleGenes) {
     this.populationCreator = populationCreator;
     this.mutationManager = mutationManager;
     this.scoreEvaluator = scoreEvaluator;
-    this.chromosomePrinter = chromosomePrinter;
     this.possibleGenes = possibleGenes;
   }
 
