@@ -1,18 +1,15 @@
-package salesmanproblem;
+package geneticalgorithm;
 
-import geneticalgorithm.AlgorithmLogger;
-import geneticalgorithm.interfaces.IMutationManager;
 import geneticalgorithm.model.Chromosome;
-import salesmanproblem.model.SalesmanGene;
+import geneticalgorithm.model.Gene;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
-public class SalesmanMutationManager implements IMutationManager<SalesmanGene> {
+public class MutationManager<T extends Gene> {
 
-  @Override
-  public Chromosome<SalesmanGene> mutateChromosome(
-      Chromosome<SalesmanGene> chromosome, double mutationRate) {
+  Chromosome<T> mutateChromosome(Chromosome<T> chromosome, double mutationRate) {
 
     Random random = new Random(System.currentTimeMillis());
 
@@ -23,12 +20,21 @@ public class SalesmanMutationManager implements IMutationManager<SalesmanGene> {
       int x = random.nextInt(newChromosome.getGenes().size());
       int y = random.nextInt(newChromosome.getGenes().size());
 
-      SalesmanGene temp = newChromosome.getGenes().get(x);
+      T temp = newChromosome.getGenes().get(x);
       newChromosome.getGenes().set(x, newChromosome.getGenes().get(y));
       newChromosome.getGenes().set(y, temp);
       AlgorithmLogger.logMutation();
       return newChromosome;
     }
     return chromosome;
+  }
+
+  List<Chromosome<T>> mutateGeneration(List<Chromosome<T>> chromosomes, double mutationRate) {
+
+    List<Chromosome<T>> result = new ArrayList<>();
+    for (Chromosome<T> currentChromosome : chromosomes) {
+      result.add(mutateChromosome(currentChromosome, mutationRate));
+    }
+    return result;
   }
 }

@@ -1,7 +1,6 @@
 package geneticalgorithm;
 
 import geneticalgorithm.interfaces.IChromosomePrinter;
-import geneticalgorithm.interfaces.IMutationManager;
 import geneticalgorithm.interfaces.IScoreEvaluator;
 import geneticalgorithm.model.Chromosome;
 import geneticalgorithm.model.Gene;
@@ -12,14 +11,14 @@ import java.util.List;
 public class MainAlgorithm<T extends Gene> {
 
   private PopulationCreator<T> populationCreator;
-  private IMutationManager<T> mutationManager;
+  private MutationManager<T> mutationManager;
   private IScoreEvaluator<T> scoreEvaluator;
   private IChromosomePrinter<T> chromosomePrinter;
   private List<T> possibleGenes;
 
   public MainAlgorithm(
       PopulationCreator<T> populationCreator,
-      IMutationManager<T> mutationManager,
+      MutationManager<T> mutationManager,
       IScoreEvaluator<T> scoreEvaluator,
       IChromosomePrinter<T> chromosomePrinter,
       List<T> possibleGenes) {

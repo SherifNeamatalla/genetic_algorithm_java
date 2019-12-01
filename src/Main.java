@@ -2,9 +2,9 @@ import geneticalgorithm.AlgorithmLogger;
 import geneticalgorithm.MainAlgorithm;
 import geneticalgorithm.PopulationCreator;
 import geneticalgorithm.SolutionValidator;
+import geneticalgorithm.MutationManager;
 import geneticalgorithm.model.Chromosome;
 import salesmanproblem.SalesmanChromosomePrinter;
-import salesmanproblem.SalesmanMutationManager;
 import salesmanproblem.SalesmanScoreEvaluator;
 import salesmanproblem.io.FileParser;
 import salesmanproblem.model.SalesmanGene;
@@ -14,8 +14,8 @@ import java.util.List;
 
 public class Main {
 
-  private static final int GENERATIONS = 100000;
-  private static final int POPULATION_COUNT = 10;
+  private static final int GENERATIONS = 500;
+  private static final int POPULATION_COUNT = 100;
 
   private static final double MUTATION_RATE = 0.1;
 
@@ -33,7 +33,7 @@ public class Main {
     MainAlgorithm<SalesmanGene> mainAlgorithm =
         new MainAlgorithm<>(
             new PopulationCreator<>(),
-            new SalesmanMutationManager(),
+            new MutationManager<>(),
             new SalesmanScoreEvaluator(),
             new SalesmanChromosomePrinter(),
             possibleGenes);
