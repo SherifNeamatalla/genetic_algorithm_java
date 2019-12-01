@@ -14,11 +14,13 @@ public class AlgorithmLogger {
     if (MUTATION_LOGGING_ENABLED) System.out.println("Mutation happened!");
   }
 
-  public static void logBestResult(String message) {
+  public static void logGenerationResults(
+      int generationNumber, double bestScore, double averageScore, double worstScore) {
 
     if (BEST_RESULT_LOGGING_ENABLED) {
-      System.out.println("Best result found!");
-      System.out.println(message);
+      System.out.println("Generation " + generationNumber + " : ");
+      System.out.println(
+          "Best : " + bestScore + " Avg: " + averageScore + " Worst : " + worstScore);
     }
   }
 }

@@ -18,6 +18,6 @@ public class SalesmanChromosomePrinter implements IChromosomePrinter<SalesmanGen
       previousGene = gene;
       result.append(gene.getId()).append(" ");
     }
-    return result.toString() + "\n Total distance : " + totalDistance;
+    return String.valueOf(totalDistance);
   }
 }

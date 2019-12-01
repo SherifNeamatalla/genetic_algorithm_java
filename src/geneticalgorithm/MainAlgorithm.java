@@ -1,8 +1,8 @@
 package geneticalgorithm;
 
-import geneticalgorithm.interfaces.IScoreEvaluator;
 import geneticalgorithm.interfaces.IChromosomePrinter;
 import geneticalgorithm.interfaces.IMutationManager;
+import geneticalgorithm.interfaces.IScoreEvaluator;
 import geneticalgorithm.model.Chromosome;
 import geneticalgorithm.model.Gene;
 
@@ -69,7 +69,12 @@ public class MainAlgorithm<T extends Gene> {
         bestChromosome = population.get(0);
       else population.set(population.size() - 1, bestChromosome);
 
-      AlgorithmLogger.logBestResult(chromosomePrinter.getPrintedChromosome(bestChromosome));
+      double bestScore = scoreEvaluator.evaluateChromosome(bestChromosome);
+      double averageScore =
+          scoreEvaluator.evaluateChromosome(population.get(population.size() / 2));
+      double worstScore = scoreEvaluator.evaluateChromosome(population.get(population.size() - 1));
+
+      AlgorithmLogger.logGenerationResults(i, bestScore, averageScore, worstScore);
     }
 
     return bestChromosome;
